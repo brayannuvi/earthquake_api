@@ -31,7 +31,7 @@ module EarthquakeApi
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'http://localhost:3001' # Reemplaza con el origen de tu frontend local
+        origins 'http://localhost:3001', 'http://127.0.0.1:3001'
         resource '*', headers: :any, methods: [:get, :post]
       end
     end
